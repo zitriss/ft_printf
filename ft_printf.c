@@ -6,7 +6,7 @@
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 16:20:43 by tlize             #+#    #+#             */
-/*   Updated: 2024/11/26 17:03:42 by tlize            ###   ########.fr       */
+/*   Updated: 2024/11/26 17:52:12 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ static int	redirect(char special, va_list args)
 	else if (special == 's')
 		return (ft_printfs(va_arg(args, char *)));
 	else if (special == 'p')
-		//ft_printfp(va_arg(args, void *));
-		return (1);
+		return(ft_printfp(va_arg(args, void *)));
 	else if (special == 'd' || special == 'i')
 		//ft_putnbr_fd(va_arg(args, int), 1);
 		return (1);
@@ -30,8 +29,7 @@ static int	redirect(char special, va_list args)
 		//ft_printfu(va_arg(args, unsigned int));
 		return (1);
 	else if (special == 'x' || special == 'X')
-		//ft_printfx(va_arg(args, unsigned int), special);
-		return (1);
+		return(ft_printfx(va_arg(args, unsigned int), special));
 	else if (special == '%')
 		ft_putchar_fd('%', 1);
 	return (1);
