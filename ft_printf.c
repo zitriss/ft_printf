@@ -6,7 +6,7 @@
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 16:20:43 by tlize             #+#    #+#             */
-/*   Updated: 2024/11/26 17:52:12 by tlize            ###   ########.fr       */
+/*   Updated: 2024/11/26 18:20:51 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 static int	redirect(char special, va_list args)
 {
 	if (special == 'c')
-		ft_putchar_fd((char)va_arg(args, int), 1);
+		return (ft_printfc((char)va_arg(args, int)));
 	else if (special == 's')
 		return (ft_printfs(va_arg(args, char *)));
 	else if (special == 'p')

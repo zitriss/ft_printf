@@ -6,7 +6,7 @@
 #    By: tlize <tlize@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/26 16:06:48 by tlize             #+#    #+#              #
-#    Updated: 2024/11/26 16:58:56 by tlize            ###   ########.fr        #
+#    Updated: 2024/11/26 18:21:28 by tlize            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ RM = rm -f
 SRCS_DIR = .
 LIBFT_DIR = libft
 
-SRCS = ft_printf.c ft_printfp.c ft_printfu.c ft_printfx.c ft_printfs.c
+SRCS = ft_printf.c ft_printfp.c ft_printfu.c ft_printfx.c ft_printfs.c \
+		ft_printfc.c
 OBJS = $(SRCS:.c=.o)
 
 INCLUDES = -I$(SRCS_DIR) -I$(LIBFT_DIR)
