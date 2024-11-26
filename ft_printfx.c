@@ -6,7 +6,7 @@
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 15:15:42 by tlize             #+#    #+#             */
-/*   Updated: 2024/11/26 18:34:23 by tlize            ###   ########.fr       */
+/*   Updated: 2024/11/26 18:49:56 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,7 @@ int	ft_printfx(unsigned int n, char special)
 	else
 		return (0);
 	if (n == 0)
-	{
-		ft_putchar_fd('0', 1);
-		return (1);
-	}
+		ft_printfc('0');
 	if (n >= 16)
 		len += ft_printfx(n / 16, special);
 	ft_putchar_fd(hex[n % 16], 1);
