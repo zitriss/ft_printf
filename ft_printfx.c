@@ -6,7 +6,7 @@
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 15:15:42 by tlize             #+#    #+#             */
-/*   Updated: 2024/11/26 17:42:31 by tlize            ###   ########.fr       */
+/*   Updated: 2024/11/26 18:34:23 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	ft_printfx(unsigned int n, char special)
 {
 	char	*hex;
-	int len;
+	int		len;
 
 	len = 0;
 	if (special == 'x')
