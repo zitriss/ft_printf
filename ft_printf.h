@@ -6,7 +6,7 @@
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 14:53:28 by tlize             #+#    #+#             */
-/*   Updated: 2024/11/27 15:43:02 by tlize            ###   ########.fr       */
+/*   Updated: 2024/11/27 16:08:40 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_PRINTF_H
 
 # include <unistd.h>
+# include <stdint.h>
 
 int		ft_printf(const char *format, ...);
 int		ft_printfc(int s);
