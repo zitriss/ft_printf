@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printfd.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 14:53:28 by tlize             #+#    #+#             */
-/*   Updated: 2024/11/27 15:36:47 by tlize            ###   ########.fr       */
+/*   Created: 2024/11/27 15:28:04 by tlize             #+#    #+#             */
+/*   Updated: 2024/11/27 15:37:55 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft/libft.h"
+#include "ft_printf.h"
 
-# include <unistd.h>
+int ft_printfd(int n)
+{
+	int		count;
 
-int		ft_printf(const char *format, ...);
-int		ft_printfc(int s);
-int		ft_printfs(char *str);
-int		ft_printfp(void *ptr);
-int 	ft_printfu(unsigned int n);
-int		ft_printfx(unsigned int n, char format);
-int     ft_printfd(int n);
-
-#endif
+	count = 0;
+	if (n == -2147483648)
+		return write(1, "-2147483648", 11);
+	if (n < 0)
+	{
+		n = -n;
+		count  += write(1, "-", 1);
+	}
+	if (n >= 10)
+		count += ft_printfd(n / 10);
+	return (count + ft_printfc((n % 10) + '0'));
+}
